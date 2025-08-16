@@ -1,0 +1,62 @@
+{
+    "name": "tasks",
+    "scopeName": "source.tasks",
+    "patterns": [
+	{
+            "match": "(#).*$\\n?",
+            "name": "comment.line.tasks"
+        },
+	{
+	    "name": "string.quoted.double.tasks",
+	    "begin": "\"",
+	    "end": "\"",
+	    "patterns": [{
+		"match": "\\\\(u\\h{4}|.)",
+		"name": "constant.character.escape.tasks"
+	    }]
+	},
+	{
+	    "name": "constant.numeric.tasks",
+	    "match": "\\d+"
+	},
+	{
+	    "name": "keyword.control.tasks",
+	    "match": "\\b(exit|end|if|else|while|loop|for)\\b"
+	},
+	{
+	    "name": "keyword.operator.tasks",
+	    "match": "\\b(in|match)\\b"
+	},
+	{
+	    "name": "keyword.other.tasks",
+	    "match": "\\b(node|network|net|env|help|inputs|output|nodes|hook|function|func|map|attrs)\\b"
+	},
+	{
+	    "name": "constant.language.tasks",
+	    "match": "\\b(true|false|nan|inf)\\b"
+	},
+	{
+	    "match": "<(inp|out|seq|inv|inputsfirst|outputfirst|sequential|inverse)>",
+	    "captures": {
+		"1": {
+		    "name": "support.type.tasks"
+		}
+	    }
+	},
+	{
+	    "match": "(([A-Za-z_]+)[.])?([A-Za-z][A-Za-z0-9_]*)[(]",
+	    "captures": {
+		"2": {
+		    "name": "support.class.tasks"
+		},
+		"3": {
+		    "name": "entity.name.function.tasks"
+		}
+	    }
+	},
+	{
+	    "name": "keyword.other.network",
+	    "match": "(->|[?])"
+	}
+    ]
+}

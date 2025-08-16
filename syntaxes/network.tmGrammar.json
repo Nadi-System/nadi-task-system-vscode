@@ -1,0 +1,30 @@
+{
+    "name": "network",
+    "scopeName": "source.network",
+    "fileTypes": [
+	"network"
+    ],
+    "patterns": [
+	{
+            "match": "(#).*$\\n?",
+            "name": "comment.line.network"
+        },
+	{
+	    "name": "string.unquoted.network",
+	    "match": "\\b[a-zA-Z0-9_]+\\b"
+	},
+	{
+	    "name": "string.quoted.double.network",
+	    "begin": "\"",
+	    "end": "\"",
+	    "patterns": [{
+		"match": "\\\\(u\\h{4}|.)",
+		"name": "constant.character.escape.network"
+	    }]
+	},
+	{
+	    "name": "keyword.other.network",
+	    "match": "->"
+	}
+    ]
+}

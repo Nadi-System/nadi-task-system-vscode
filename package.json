@@ -1,0 +1,50 @@
+{
+    "name": "nadi-task-system",
+    "displayName": "NADI System",
+    "description": "Domain Specific Language for Network Analysis and Data Integration (NADI) System",
+    "version": "0.7.0",
+    "publisher": "atreyagaurav",
+    "author": {
+	"name": "Gaurav Atreya"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Nadi-System/nadi-task-system"
+    },
+    "icon": "images/icon.png",
+    "engines": {
+	"vscode": "^1.100.0"
+    },
+    "categories": [
+	"Programming Languages"
+    ],
+    "contributes": {
+	"languages": [
+	    {
+		"id": "tasks",
+		"extensions": [
+		    ".tasks"
+		]
+	    },
+	    {
+		"id": "network",
+		"extensions": [
+		    ".network",
+		    ".net"
+		]
+	    }
+	],
+	"grammars": [
+	    {
+		"language": "network",
+		"scopeName": "source.network",
+		"path": "./syntaxes/network.tmGrammar.json"
+	    },
+	    {
+		"language": "tasks",
+		"scopeName": "source.tasks",
+		"path": "./syntaxes/tasks.tmGrammar.json"
+	    }
+	]
+    }
+}
