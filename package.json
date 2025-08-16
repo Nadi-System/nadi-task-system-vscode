@@ -3,13 +3,13 @@
     "displayName": "NADI System",
     "description": "Domain Specific Language for Network Analysis and Data Integration (NADI) System",
     "version": "0.7.0",
-    "publisher": "atreyagaurav",
+    "publisher": "GauravAtreya",
     "author": {
 	"name": "Gaurav Atreya"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/Nadi-System/nadi-task-system"
+        "url": "https://github.com/Nadi-System/nadi-task-system-vscode"
     },
     "icon": "images/icon.png",
     "engines": {
